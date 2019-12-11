@@ -1,0 +1,7 @@
+export class Emp {
+  id: number;
+  name: string;
+  mobile: string;
+  location: string;
+  email: string;
+}

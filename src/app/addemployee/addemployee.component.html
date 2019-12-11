@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+  <head>
+  </head>
+        <body>
+            <form class="formbox" #myform="ngForm">
+                <h1>Add Employee</h1>
+                  <div class="form1">
+                      <label>Employee name: <br>
+                        <input #name id="name" maxlength="30" minlength="3" pattern="[a-zA-Z]+" class="form-control" name="name" ngModel required />
+                      </label>
+                  </div>
+                  <div>
+                    <label>Location: </label><br>
+                      <select class="loc" #empLoc id="location" minlength="3" maxlength="30" pattern="[a-zA-Z]+">
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                      </select>
+                  </div>
+                  <div>
+                    <label>Email: <br>
+                      <input type="email" #empEmail id="email" maxlength="30"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" name="email" ngModel required/>
+                    </label>
+                  </div>
+                  <div>
+                    <label>Mobile: <br>
+                      <input #empMob id="mobile"  pattern="[0-9]{10}" class="form-control" name="mobile" ngModel required/>
+                    </label>
+                  </div>
+                  <button [disabled]="!myform.form.valid"  routerLink="/employees" id="add" (click)="add(name.value,empLoc.value,empEmail.value,empMob.value)">
+                        Submit
+                  </button>
+            </form>
+        </body>
+  </html>

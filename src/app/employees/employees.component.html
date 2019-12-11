@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+
+
+<br/><br/>
+<form><label>Filter By: </label>
+       <input id="filter" type="text" [(ngModel)]="search" name="search" placeholder="Search..">
+</form>
+<p>
+<label>Total Number of Employees : </label> <label id="count">{{(employees| empFilter: search).length}}</label>
+</p>
+<br/>
+<div class="tb">
+      <table id="heading" border="1"> 
+          
+          <td class="thead">Emp ID</td>
+          <td class="thead">Name</td>
+          <td class="thead">Location</td>
+          <td class="thead">Email</td>
+          <td class="thead">Mobile</td>
+          <td class="thead">Update-Info</td>
+          <td class="thead">Delete</td>
+        
+
+          <tr *ngFor="let emp of employees | empFilter : search">
+              <td>
+              <a routerLink="/info/{{emp.id}}">
+              {{ emp.id }}
+              </a>
+            </td>
+              <td id="name{{emp.id}}">{{ emp.name | uppercase }}	</td>
+              <td id="loc{{emp.id}}">{{ emp.location }}	</td>
+              <td id="email{{emp.id}}">{{ emp.email }}</td>
+              <td id="mob{{emp.id}}">{{ emp.mobile }}</td>
+              <td>
+                <a id="Edit{{emp.id}}" routerLink="/editEmployee/{{emp.id}}">
+                   Update{{ emp.id }}
+                </a>
+              </td>
+              <td>
+                <a id="Delete{{emp.id}}" routerLink="/employees" (click)="delete(emp)">
+                  Delete{{ emp.id }}
+                </a>
+              </td>
+          </tr>
+      </table>
+</div>
+</body>
+</html>

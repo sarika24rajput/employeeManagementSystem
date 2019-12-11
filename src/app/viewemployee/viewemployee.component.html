@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+    <body>
+
+
+        <h1>Employee Details </h1>
+            <div class="detail" *ngIf="emp">
+                <div>
+                  <label>ID: </label> <label id="id">{{emp.id}}</label>
+                </div>
+                <div>
+                  <label>Name: </label> <label id="name">{{emp.name}}</label>
+                </div>
+                <div>
+                  <label>Location: </label> <label id="location">{{emp.location}}</label>
+                </div>
+                <div>
+                  <label>Email: </label> <label id="email">{{emp.email}}</label>
+                </div>
+                <div>
+                  <label>Mobile: </label> <label id="mobile">{{emp.mobile}}</label>
+                </div>
+                <p>
+                  <button id="back" (click)="goBack()">Back</button>
+                </p>
+            </div>
+    </body>
+</html>

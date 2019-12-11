@@ -1,0 +1,76 @@
+#filter {
+  width: 50px;
+  box-sizing: border-box;
+  border: 2px solid rgb(150, 189, 248);
+  border-radius: 2px;
+  font-size: 20px;
+  background-color: white;
+  background-position: 20px 20px; 
+  background-repeat: no-repeat;
+  padding: 10px 75px 05px 75px;
+  -webkit-transition: width 0.1s ease-in-out;
+  transition: width 0.2s ease-in-out;
+}
+
+#filter:focus {
+    width: 50%;
+  }
+
+label{
+  color:rgb(5, 63, 150) ;
+  font-size: 20px;
+  font-family: cursive;
+}
+#count{
+  color: rgb(209, 86, 86);
+}
+
+.tb a{
+    text-decoration: none;
+    color: rgb(47, 167, 236);
+}
+/*
+table{
+  border-collapse: collapse;
+  width: 75%;
+  height: 100px;
+  padding-left: 4em ;
+
+}*/
+#heading{
+  border-collapse: collapse;
+  width: 75%;
+  height: 100px;
+  padding-left: 4em ;
+
+}
+
+#heading .thead{
+  padding-top: 12px ;
+  padding-bottom: 12px;
+  background-color:  rgb(81, 153, 235);
+  color: white;
+  font-style: italic;
+}
+#heading td{
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(2, 62, 153);
+  text-align: center;
+  padding: 8px;
+}
+#heading tr:nth-child(even){
+  background-color: #bdd6ee;
+}
+#heading tr:hover{
+  background-color:  #ddd;
+}
+
+/*
+.thead{
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(5, 63, 150);
+  text-align: center;
+}
+*/

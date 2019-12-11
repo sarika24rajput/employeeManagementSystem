@@ -1,0 +1,21 @@
+div
+{
+    margin:11px;
+    padding-right:25%;
+    padding-left:25%;
+    padding-top: 12%;
+    padding-bottom: 12%;
+    background-color:#ffffffd6;
+    border-radius: 10px;
+   font-family: cursive;
+}
+div p{
+    text-align: center;
+    font-size: 1.90976cm;
+    color: rgb(7, 78, 136);
+    transition:0.25s;
+}
+div p:hover{
+    color:rgb(201, 96, 96)
+    
+}

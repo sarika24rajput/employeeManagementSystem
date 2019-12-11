@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+      <body>
+            <form class="formbox" #myform="ngForm">
+                <h1>Edit Employee</h1>
+                    <div *ngIf="emp">
+                      <div>
+                        <label>Employee Name: </label>
+                           <input [(ngModel)]="emp.name"  name="name" maxlength="30" minlength="3" pattern="[a-zA-Z]+" id="name" placeholder="name"/>
+                      </div>
+                      <div>
+                        <label>Location: </label>
+                          <select #empLoc id="location" minlength="3" maxlength="30"[(ngModel)]="emp.location" name="location" pattern="[a-zA-Z]+">
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                          </select>
+                      </div>
+                      <div>
+                        <label>Email: </label>
+                          <input [(ngModel)]="emp.email" type="email" name="email" maxlength="30" id="email" placeholder="email"/>
+                      </div>
+                      <div>
+                        <label>Mobile: </label>
+                          <input [(ngModel)]="emp.mobile" name="mobile" pattern="[0-9]{10}" id="mobile" placeholder="mobile"/>
+                      </div>
+                      <p>
+                        <button [disabled]="!myform.form.valid" id="update" (click)="save()">Update</button>
+                      </p>
+                    </div>
+            </form>
+    </body>
+</html>

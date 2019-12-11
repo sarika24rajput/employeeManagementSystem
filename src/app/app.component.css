@@ -1,0 +1,31 @@
+
+h1{
+    padding-left: 12em;
+    font-size: 40px;
+    font-family: cursive;
+    color: #700513;
+}
+
+.btn{
+    background-color: #0c9bfa;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding-left: 20px;
+}
+
+.btn:hover { 
+    background-color: rgb(238, 160, 160);  
+    opacity: 1;
+}
